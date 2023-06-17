@@ -1,0 +1,122 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+================
+CSS Reset Bitiş
+================
+*/
+
+body {
+  font-family: sans-serif;
+  background: #000000;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin: 120px;
+  font-size: 90px;
+  color: rgba(255, 0, 0, 0.6);
+  user-select: none;
+  &:hover {
+    color: rgba(255, 0, 0, 1);
+  }
+  &:active {
+    color: rgba(255, 0, 0, 0.6);
+  }
+}
+
+.btn-plus {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-plus:hover {
+  transform: scale(1.1);
+}
+
+.btn-minus {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-minus:hover {
+  transform: scale(0.9);
+}
+
+.counter-span {
+  background: rgba(255, 0, 0, 1);
+  border-radius: 50px;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.counter {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+.counter-span h1.active {
+  animation: move-down 0.5s ease;
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
